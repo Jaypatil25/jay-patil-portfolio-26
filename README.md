@@ -11,10 +11,9 @@ React • TypeScript • GSAP • Three.js • WebGL • HTML • CSS • JavaSc
 
 ## 🛠️ Instructions
 
-GSAP Club plugins used here are trial versions.  
-⚠️ Trial plugins cannot be used for production or hosting.
+GSAP bonus plugins are imported from the standard `gsap` package.
 
-For official GSAP Club plugins: https://gsap.com/docs/v3/Installation/
+Install dependencies with npm and use `gsap/*` plugin imports (for example `gsap/ScrollSmoother`, `gsap/SplitText`).
 
 ---
 
