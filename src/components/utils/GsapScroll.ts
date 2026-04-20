@@ -133,59 +133,51 @@ export function setCharTimeline(
 }
 
 export function setAllTimeline() {
-  const careerTimeline = gsap.timeline({
-    scrollTrigger: {
-      trigger: ".career-section",
-      start: "top 30%",
-      end: "100% center",
-      scrub: true,
-      invalidateOnRefresh: true,
-    },
-  });
-  careerTimeline
-    .fromTo(
-      ".career-timeline",
-      { maxHeight: "10%" },
-      { maxHeight: "100%", duration: 0.5 },
-      0
-    )
+  const timelineSections = gsap.utils.toArray<HTMLElement>(".timeline-section");
 
-    .fromTo(
-      ".career-timeline",
-      { opacity: 0 },
-      { opacity: 1, duration: 0.1 },
-      0
-    )
-    .fromTo(
-      ".career-info-box",
-      { opacity: 0 },
-      { opacity: 1, stagger: 0.1, duration: 0.5 },
-      0
-    )
-    .fromTo(
-      ".career-dot",
-      { animationIterationCount: "infinite" },
-      {
-        animationIterationCount: "1",
-        delay: 0.3,
-        duration: 0.1,
+  timelineSections.forEach((section) => {
+    const timelineLine = section.querySelector<HTMLElement>(".career-timeline");
+    const timelineDot = section.querySelector<HTMLElement>(".career-dot");
+    const infoBoxes = section.querySelectorAll<HTMLElement>(".career-info-box");
+
+    if (!timelineLine || !timelineDot || !infoBoxes.length) {
+      return;
+    }
+
+    const sectionTimeline = gsap.timeline({
+      scrollTrigger: {
+        trigger: section,
+        start: "top 30%",
+        end: "100% center",
+        scrub: true,
+        invalidateOnRefresh: true,
       },
-      0
-    );
+    });
 
-  if (window.innerWidth > 1024) {
-    careerTimeline.fromTo(
-      ".career-section",
-      { y: 0 },
-      { y: "20%", duration: 0.5, delay: 0.2 },
-      0
-    );
-  } else {
-    careerTimeline.fromTo(
-      ".career-section",
-      { y: 0 },
-      { y: 0, duration: 0.5, delay: 0.2 },
-      0
-    );
-  }
+    sectionTimeline
+      .fromTo(
+        timelineLine,
+        { maxHeight: "10%" },
+        { maxHeight: "100%", duration: 0.5 },
+        0
+      )
+      .fromTo(timelineLine, { opacity: 0 }, { opacity: 1, duration: 0.1 }, 0)
+      .fromTo(infoBoxes, { opacity: 0 }, { opacity: 1, stagger: 0.1, duration: 0.5 }, 0)
+      .fromTo(
+        timelineDot,
+        { animationIterationCount: "infinite" },
+        {
+          animationIterationCount: "1",
+          delay: 0.3,
+          duration: 0.1,
+        },
+        0
+      );
+
+    if (window.innerWidth > 1024) {
+      sectionTimeline.fromTo(section, { y: 0 }, { y: "20%", duration: 0.5, delay: 0.2 }, 0);
+    } else {
+      sectionTimeline.fromTo(section, { y: 0 }, { y: 0, duration: 0.5, delay: 0.2 }, 0);
+    }
+  });
 }

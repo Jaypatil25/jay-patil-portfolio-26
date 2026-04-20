@@ -29,6 +29,10 @@
   font-family: "Geist", sans-serif;
   font-weight: 300;
 }
+.experience-section {
+  margin-top: -120px;
+  margin-bottom: 120px;
+}
 .career-info {
   position: relative;
   display: flex;
@@ -103,6 +107,67 @@
   animation: timeline 0.8s linear infinite forwards;
 }
 
+.freelance-section {
+  width: 100%;
+  margin: 80px auto 60px;
+}
+
+.freelance-container {
+  width: min(100%, 980px);
+  margin: 0 auto;
+  border: 1px solid #303030;
+  border-radius: 20px;
+  padding: 32px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.015));
+}
+
+.freelance-section h2 {
+  font-size: 58px;
+  line-height: 58px;
+  font-weight: 400;
+  margin: 0 0 28px;
+  background: linear-gradient(0deg, #7f40ff, #ffffff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.freelance-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+}
+
+.freelance-header h3 {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.freelance-header span {
+  color: var(--accentColor);
+  font-size: 18px;
+}
+
+.freelance-container h4 {
+  margin: 8px 0 20px;
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.freelance-container ul {
+  margin: 0;
+  padding-left: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  color: #d4d4d4;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
 @keyframes timeline {
   10%,
   20%,
@@ -165,6 +230,13 @@
     margin-top: -200px;
     margin-bottom: 0;
   }
+  .experience-section {
+    margin-top: 0;
+    margin-bottom: 40px;
+  }
+  .freelance-section {
+    margin-top: 40px;
+  }
 }
 @media only screen and (max-width: 900px) {
   .career-info-box {
@@ -212,5 +284,29 @@
     align-items: start;
     place-items: inherit;
     justify-content: left;
+  }
+  .freelance-container {
+    padding: 20px;
+    border-radius: 16px;
+  }
+  .freelance-section h2 {
+    font-size: 42px;
+    line-height: 42px;
+  }
+  .freelance-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+  .freelance-header h3 {
+    font-size: 24px;
+  }
+  .freelance-header span,
+  .freelance-container h4 {
+    font-size: 16px;
+  }
+  .freelance-container ul {
+    font-size: 14px;
+    line-height: 1.5;
   }
 }

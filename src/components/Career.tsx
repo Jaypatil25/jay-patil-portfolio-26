@@ -2,12 +2,9 @@ import "./styles/Career.css";
 
 const Career = () => {
   return (
-    <div className="career-section section-container">
+    <section className="career-section timeline-section section-container">
       <div className="career-container">
-        <h2>
-          My career <span>&</span>
-          <br /> experience
-        </h2>
+        <h2>Education</h2>
         <div className="career-info">
           <div className="career-timeline">
             <div className="career-dot"></div>
@@ -15,42 +12,42 @@ const Career = () => {
           <div className="career-info-box">
             <div className="career-info-in">
               <div className="career-role">
-                <h4>Full Stack Developer Intern</h4>
-                <h5>Bhairavacha Bhandara</h5>
-              </div>
-              <h3>2025</h3>
-            </div>
-            <p>
-              Redesigned and optimized the UI of a ticket booking platform using React and Tailwind CSS. Collaborated with designers and backend teams to deliver product-aligned features efficiently. Integrated Supabase for backend services and streamlined admin panel functionality.
-            </p>
-          </div>
-          <div className="career-info-box">
-            <div className="career-info-in">
-              <div className="career-role">
-                <h4>Freelancing</h4>
-                <h5>Media One PR</h5>
-              </div>
-              <h3>2026</h3>
-            </div>
-            <p>
-              Developed a responsive PR agency website using React and Tailwind CSS. Built reusable UI components and optimized performance using Vite. Structured and presented high-impact content highlighting 1M+ campaign impressions and 50+ industry collaborations.
-            </p>
-          </div>
-          <div className="career-info-box">
-            <div className="career-info-in">
-              <div className="career-role">
                 <h4>Bachelor of Technology (AI ML)</h4>
                 <h5>Newton School of Technology, ADYPU</h5>
               </div>
-              <h3>NOW</h3>
+              <h3>2024-2028</h3>
             </div>
             <p>
-              Passionate Computer Science student specializing in AI-ML with hands-on experience in web development. Grade: 5.84/10.0. Focus on delivering impactful and innovative tech solutions through collaborative project execution.
+              Focused on applied AI-ML foundations, software engineering, and real-world product development through hands-on projects.
+            </p>
+          </div>
+          <div className="career-info-box">
+            <div className="career-info-in">
+              <div className="career-role">
+                <h4>Intermediate (Class XII)</h4>
+                <h5>Pace Junior Science College, Kalyan</h5>
+              </div>
+              <h3>2023-2024</h3>
+            </div>
+            <p>
+              Built strong fundamentals in mathematics, science, and analytical problem-solving that now support my engineering workflow.
+            </p>
+          </div>
+          <div className="career-info-box">
+            <div className="career-info-in">
+              <div className="career-role">
+                <h4>Matriculation (Class X)</h4>
+                <h5>Smt. K.C. Gandhi English School, Kalyan</h5>
+              </div>
+              <h3>2021-2022</h3>
+            </div>
+            <p>
+              Completed core school education with emphasis on discipline, communication, and a strong base for technical learning.
             </p>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

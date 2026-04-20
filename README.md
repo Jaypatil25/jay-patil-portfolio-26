@@ -1,37 +1,7 @@
-# My Portfolio Website - Overview 🚀
+# Jay Patil — Portfolio Website 🚀
 
-This repository contains the open-source version of my personal portfolio website.  
-Feel free to explore the code and use it for learning and inspiration.
+Personal portfolio website built with React, TypeScript, GSAP, and Three.js.
 
----
-
-## ⚠️ Usage Notice
-
-This project is shared for learning purposes only.
-
-Please do NOT:
-- Clone or replicate the full website or design
-- Repost it with minor content changes
-- Use this project for commercial/client work
-- Create tutorials or content using this exact project
-
-If you use parts of the code, you must provide proper credit linking back to the original repository.
-
-Build your own version — don’t just copy.
-
-— Jay Patil
-
----
-
-## 🛠️ Instructions
-
-I have modified the GSAP Club plugins using trial versions.  
-⚠️ Note: Trial plugins cannot be used for production or hosting.
-
-For official GSAP Club plugins, refer here:  
-https://gsap.com/docs/v3/Installation/
-
----
 
 ## ⚙️ Tech Stack
 
@@ -39,27 +9,41 @@ React • TypeScript • GSAP • Three.js • WebGL • HTML • CSS • JavaSc
 
 ---
 
-## 🎨 Assets Usage
+## 🛠️ Instructions
 
-Some 3D assets included in this repository are free to use for learning purposes.
+GSAP Club plugins used here are trial versions.  
+⚠️ Trial plugins cannot be used for production or hosting.
 
-However:
-
-- The original 3D avatar used on my live portfolio is NOT included in this repository
-- That avatar is a custom asset created over ~1 month
-- It is not open source and not available for reuse
-
-Any usage, extraction, or redistribution of that avatar from my live website is strictly prohibited.
+For official GSAP Club plugins: https://gsap.com/docs/v3/Installation/
 
 ---
 
-![Protfolio-Preview](https://github.com/user-attachments/assets/3c4557e7-6392-4928-b8a9-7b2476ef4edd)
+## 📁 Projects
+
+### 1. BookBuddy — Ticket Booking App
+Cross-platform movie ticket booking app with seat selection and digital QR tickets.  
+**Stack:** React Native, Expo  
+🔗 [GitHub](https://github.com/Jaypatil25/MAD_Project) • [Demo](https://drive.google.com/file/d/1ztKClXdJvNdbvs4ttH5HkRj-fHC3V_G0/view)
 
 ---
 
-## 📄 License
+### 2. MindNest — Startup Incubation Web App
+Responsive UI for student idea submission, dashboards, and collaboration features with role-based navigation.  
+**Stack:** React, Tailwind CSS, Radix UI, Express, Prisma  
+🔗 [GitHub](https://github.com/KhanjarSingh/MindNest-Team_Async) • [Live](https://mind-nest-team-async.vercel.app/)
 
-This project is licensed under the Personal Portfolio License (PPL) v1.0.
+---
 
-See the LICENSE file for full details
+### 3. BookMyJet — Flight Booking Web App
+Modern flight booking platform with clean UI, responsive design, and scalable frontend architecture.  
+**Stack:** React, Tailwind CSS, Vercel  
+🔗 [GitHub](https://github.com/Jaypatil25/BookMyJet---website) • [Live](https://book-my-jet-website--phi.vercel.app/)
+
+---
+
+## 🎨 Assets
+
+- The 3D avatar on the live portfolio is a custom asset (~1 month of work) and is **not included** in this repo
+- Any extraction or redistribution of that avatar from the live site is strictly prohibited
+- Other 3D assets are free to use for learning
 
