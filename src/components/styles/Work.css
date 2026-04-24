@@ -71,6 +71,10 @@
   font-weight: 600;
 }
 
+.work-title > div h4 {
+  font-weight: 700;
+}
+
 .work-info h4 {
   font-size: 18px;
   font-weight: 400;

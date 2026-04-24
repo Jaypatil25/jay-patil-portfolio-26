@@ -1,0 +1,375 @@
+.extracurricular-section {
+  width: 100%;
+  margin: 100px auto;
+  padding: 120px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.extracurricular-header {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.extracurricular-section h2 {
+  font-size: 70px;
+  text-align: center;
+  font-weight: 500;
+  margin: 0;
+  background: linear-gradient(135deg, #c2a4ff, #ffffff, #c2a4ff);
+  background-size: 200% 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  animation: gradientShift 3s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.header-glow {
+  position: absolute;
+  width: 400px;
+  height: 200px;
+  background: radial-gradient(ellipse at center, rgba(194, 164, 255, 0.3) 0%, transparent 70%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  filter: blur(40px);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.extracurricular-subtitle {
+  text-align: center;
+  font-size: 16px;
+  color: #9a92ac;
+  margin: 0 0 60px;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+
+.activities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 32px;
+  width: 100%;
+  max-width: 1300px;
+  position: relative;
+  z-index: 1;
+}
+
+.activity-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 32px 28px;
+  background: rgba(11, 8, 12, 0.8);
+  border: 1px solid rgba(194, 164, 255, 0.2);
+  border-radius: 16px;
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+}
+
+.card-glow {
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle,
+    var(--card-color, #c2a4ff) 0%,
+    transparent 70%
+  );
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  filter: blur(20px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.card-border {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    var(--card-color, #c2a4ff),
+    transparent,
+    transparent
+  );
+  border-radius: 16px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+  mask-image: linear-gradient(
+    to right,
+    black 1px,
+    transparent 1px,
+    transparent calc(100% - 1px),
+    black calc(100% - 1px)
+  );
+  z-index: 1;
+}
+
+.activity-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  border-color: var(--card-color, #c2a4ff);
+  box-shadow: 0 20px 40px rgba(194, 164, 255, 0.15);
+}
+
+.activity-card:hover .card-glow {
+  opacity: 0.4;
+}
+
+.activity-card:hover .card-shine {
+  animation: shine 0.6s ease-in-out;
+}
+
+@keyframes shine {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+.card-shine {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  pointer-events: none;
+  z-index: 2;
+}
+
+.activity-number {
+  font-size: 48px;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--card-color, #c2a4ff), rgba(194, 164, 255, 0.5));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  margin-bottom: 8px;
+  opacity: 0.6;
+  transition: all 0.4s ease;
+}
+
+.activity-card:hover .activity-number {
+  opacity: 1;
+  transform: translateY(-4px);
+}
+
+.activity-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  background: rgba(194, 164, 255, 0.1);
+  border: 1px solid rgba(194, 164, 255, 0.2);
+  border-radius: 12px;
+  transition: all 0.4s ease;
+  position: relative;
+  z-index: 3;
+}
+
+.icon-glow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle,
+    var(--card-color, #c2a4ff),
+    transparent
+  );
+  border-radius: 12px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  filter: blur(8px);
+}
+
+.activity-card:hover .activity-icon-wrapper {
+  background: rgba(194, 164, 255, 0.2);
+  border-color: var(--card-color, #c2a4ff);
+  transform: scale(1.15) rotate(-5deg);
+  box-shadow: 0 0 20px rgba(194, 164, 255, 0.3);
+}
+
+.activity-card:hover .icon-glow {
+  opacity: 0.5;
+}
+
+.activity-icon {
+  font-size: 32px;
+  color: var(--card-color, #c2a4ff);
+  transition: all 0.4s ease;
+  position: relative;
+  z-index: 4;
+  filter: drop-shadow(0 0 8px var(--card-color, #c2a4ff));
+}
+
+.activity-card:hover .activity-icon {
+  transform: scale(1.2) rotate(5deg);
+  filter: drop-shadow(0 0 16px var(--card-color, #c2a4ff));
+}
+
+.activity-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: relative;
+  z-index: 3;
+}
+
+.activity-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.activity-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+  color: #eae5ec;
+  line-height: 1.3;
+  transition: all 0.4s ease;
+}
+
+.activity-card:hover h3 {
+  color: var(--card-color, #c2a4ff);
+}
+
+.activity-highlight {
+  display: inline-block;
+  padding: 6px 14px;
+  background: rgba(194, 164, 255, 0.15);
+  border: 1.5px solid var(--card-color, #c2a4ff);
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--card-color, #c2a4ff);
+  white-space: nowrap;
+  flex-shrink: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.4s ease;
+}
+
+.activity-card:hover .activity-highlight {
+  background: rgba(194, 164, 255, 0.3);
+  box-shadow: 0 0 12px var(--card-color, #c2a4ff);
+}
+
+.activity-card h4 {
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0;
+  color: #b8b0c4;
+  transition: color 0.4s ease;
+}
+
+.activity-card:hover h4 {
+  color: #c2a4ff;
+}
+
+.activity-card p {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.6;
+  margin: 0;
+  color: #9a92ac;
+  transition: color 0.4s ease;
+}
+
+.activity-card:hover p {
+  color: #a89bc0;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 1100px) {
+  .extracurricular-section h2 {
+    font-size: 56px;
+  }
+
+  .activities-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+  }
+
+  .header-glow {
+    width: 300px;
+    height: 150px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .extracurricular-section {
+    padding: 80px 0;
+    margin: 60px auto;
+  }
+
+  .extracurricular-section h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+
+  .extracurricular-subtitle {
+    font-size: 14px;
+    margin-bottom: 40px;
+  }
+
+  .activities-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .activity-card {
+    padding: 24px 16px;
+  }
+
+  .activity-header {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .activity-highlight {
+    align-self: flex-start;
+  }
+
+  .activity-number {
+    font-size: 36px;
+  }
+
+  .header-glow {
+    width: 200px;
+    height: 100px;
+  }
+}
