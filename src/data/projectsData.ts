@@ -12,6 +12,16 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: 1,
+    title: "NoteMind AI",
+    category: "Summarization | MCQs | Flashcards",
+    description: "Intelligent note-taking platform with AI-powered summarization, automated MCQ generation, and smart flashcard creation for enhanced learning",
+    tools: "Groq API, React, Tailwind CSS, Node.js, Express, Firebase Auth",
+    image: "/my-work/05.png",
+    githubLink: "https://github.com/Jaypatil25/NoteMind-AI",
+    hostedLink: "https://note-mind-ai-two.vercel.app/",
+  },
+  {
+    id: 2,
     title: "NiveshNidhi",
     category: "Chit Fund Platform | National Level Hackathon Winner",
     description: "Modernised chit funds with AI risk intelligence, blockchain transparency, KYC algorithm, chatbot integration, location-based priority engine, and secure escrow payments. Validated through real field data and offline chit operations.",
@@ -21,7 +31,7 @@ export const projects: Project[] = [
     hostedLink: "https://nivesh-nidhi-eta.vercel.app/",
   },
   {
-    id: 2,
+    id: 3,
     title: "MindNest",
     category: "Startup Incubation Web App",
     description: "Responsive UI for student idea submission, dashboards, and collaboration features with role-based navigation",
@@ -31,7 +41,7 @@ export const projects: Project[] = [
     hostedLink: "https://mind-nest-team-async.vercel.app/",
   },
   {
-    id: 3,
+    id: 4,
     title: "BookBuddy",
     category: "Ticket Booking App",
     description: "Cross-platform movie ticket booking app with seat selection and digital QR tickets",
@@ -41,7 +51,7 @@ export const projects: Project[] = [
     hostedLink: "https://drive.google.com/file/d/1ztKClXdJvNdbvs4ttH5HkRj-fHC3V_G0/view",
   },
   {
-    id: 4,
+    id: 5,
     title: "BookMyJet",
     category: "Flight Booking Web App",
     description: "Modern flight booking platform with clean UI, responsive design, and scalable frontend architecture",
@@ -50,4 +60,5 @@ export const projects: Project[] = [
     githubLink: "https://github.com/Jaypatil25/BookMyJet---website",
     hostedLink: "https://book-my-jet-website--phi.vercel.app/",
   },
+  
 ];
